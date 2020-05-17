@@ -62,5 +62,11 @@ namespace ProductMangmentSystem.PL
             frm.ShowDialog();
 
         }
+
+        private void manageProductsToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            FRM_PRODUCTS frm = new FRM_PRODUCTS();
+            frm.ShowDialog();
+        }
     }
 }

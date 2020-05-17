@@ -37,7 +37,7 @@ namespace ProductMangmentSystem.PL
             }
             else
             {
-                MessageBox.Show("Login Failed.");
+                MessageBox.Show("Login Failed.","Error");
             }
         }
     }

@@ -75,7 +75,7 @@
             this.btnBrowse.Location = new System.Drawing.Point(156, 338);
             this.btnBrowse.Name = "btnBrowse";
             this.btnBrowse.Size = new System.Drawing.Size(121, 23);
-            this.btnBrowse.TabIndex = 5;
+            this.btnBrowse.TabIndex = 4;
             this.btnBrowse.Text = "Select Image";
             this.btnBrowse.UseVisualStyleBackColor = true;
             this.btnBrowse.Click += new System.EventHandler(this.btnBrowse_Click);
@@ -96,14 +96,14 @@
             this.txtDescription.Name = "txtDescription";
             this.txtDescription.ScrollBars = System.Windows.Forms.ScrollBars.Vertical;
             this.txtDescription.Size = new System.Drawing.Size(184, 50);
-            this.txtDescription.TabIndex = 3;
+            this.txtDescription.TabIndex = 1;
             // 
             // txtProductPrice
             // 
             this.txtProductPrice.Location = new System.Drawing.Point(128, 206);
             this.txtProductPrice.Name = "txtProductPrice";
             this.txtProductPrice.Size = new System.Drawing.Size(184, 20);
-            this.txtProductPrice.TabIndex = 2;
+            this.txtProductPrice.TabIndex = 3;
             // 
             // txtProductQty
             // 
@@ -117,7 +117,8 @@
             this.txtRef.Location = new System.Drawing.Point(128, 72);
             this.txtRef.Name = "txtRef";
             this.txtRef.Size = new System.Drawing.Size(184, 20);
-            this.txtRef.TabIndex = 2;
+            this.txtRef.TabIndex = 0;
+            this.txtRef.Validated += new System.EventHandler(this.txtRef_Validated);
             // 
             // cmbCategories
             // 
@@ -133,7 +134,7 @@
             this.label6.AutoSize = true;
             this.label6.Location = new System.Drawing.Point(21, 241);
             this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(84, 13);
+            this.label6.Size = new System.Drawing.Size(82, 13);
             this.label6.TabIndex = 0;
             this.label6.Text = "Product Image :";
             // 
@@ -151,7 +152,7 @@
             this.label4.AutoSize = true;
             this.label4.Location = new System.Drawing.Point(21, 178);
             this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(72, 13);
+            this.label4.Size = new System.Drawing.Size(69, 13);
             this.label4.TabIndex = 0;
             this.label4.Text = "Product Qty :";
             // 
@@ -160,7 +161,7 @@
             this.label3.AutoSize = true;
             this.label3.Location = new System.Drawing.Point(23, 107);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(67, 13);
+            this.label3.Size = new System.Drawing.Size(66, 13);
             this.label3.TabIndex = 0;
             this.label3.Text = "Description :";
             // 
@@ -169,7 +170,7 @@
             this.label2.AutoSize = true;
             this.label2.Location = new System.Drawing.Point(23, 72);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(65, 13);
+            this.label2.Size = new System.Drawing.Size(64, 13);
             this.label2.TabIndex = 0;
             this.label2.Text = "Product ID :";
             // 
@@ -178,27 +179,35 @@
             this.label1.AutoSize = true;
             this.label1.Location = new System.Drawing.Point(23, 39);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(99, 13);
+            this.label1.Size = new System.Drawing.Size(95, 13);
             this.label1.TabIndex = 0;
             this.label1.Text = "Product Category :";
             // 
             // btnAddProduct
             // 
+            this.btnAddProduct.Image = global::ProductMangmentSystem.Properties.Resources.icon_accept_icon;
+            this.btnAddProduct.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.btnAddProduct.Location = new System.Drawing.Point(193, 401);
             this.btnAddProduct.Name = "btnAddProduct";
             this.btnAddProduct.Size = new System.Drawing.Size(92, 31);
-            this.btnAddProduct.TabIndex = 1;
+            this.btnAddProduct.TabIndex = 5;
             this.btnAddProduct.Text = "Add Product";
+            this.btnAddProduct.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             this.btnAddProduct.UseVisualStyleBackColor = true;
+            this.btnAddProduct.Click += new System.EventHandler(this.btnAddProduct_Click);
             // 
             // btnCancel
             // 
+            this.btnCancel.Image = global::ProductMangmentSystem.Properties.Resources.Button_Close_icon__2_;
+            this.btnCancel.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.btnCancel.Location = new System.Drawing.Point(291, 401);
             this.btnCancel.Name = "btnCancel";
             this.btnCancel.Size = new System.Drawing.Size(92, 31);
-            this.btnCancel.TabIndex = 1;
+            this.btnCancel.TabIndex = 6;
             this.btnCancel.Text = "Cancel";
+            this.btnCancel.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             this.btnCancel.UseVisualStyleBackColor = true;
+            this.btnCancel.Click += new System.EventHandler(this.btnCancel_Click);
             // 
             // FRM_ADD_PRODUCT
             // 
