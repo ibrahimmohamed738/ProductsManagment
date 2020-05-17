@@ -21,9 +21,9 @@ namespace ProductMangmentSystem.BL
             param[1] = new SqlParameter("@PASSWORD", SqlDbType.NVarChar, 50);
             param[1].Value = Password;
 
-            DAL.Open();
             DataTable dt = new DataTable();
             dt = DAL.SelectData("SP_LOGIN",param);
+            DAL.Close();
 
             return dt;
         }

@@ -28,7 +28,12 @@ namespace ProductMangmentSystem.PL
             DataTable dt = login.LOGIN(txtUsername.Text,txtPassword.Text);
             if (dt.Rows.Count > 0)
             {
-                MessageBox.Show("Login Success");
+                FRM_MAIN.getMainForm.productToolStripMenuItem.Enabled = true;
+                FRM_MAIN.getMainForm.customerToolStripMenuItem.Enabled = true;
+                FRM_MAIN.getMainForm.usersToolStripMenuItem.Enabled = true;
+                FRM_MAIN.getMainForm.backupToolStripMenuItem.Enabled = true;
+                FRM_MAIN.getMainForm.restoreToolStripMenuItem.Enabled = true;
+                this.Close();
             }
             else
             {
