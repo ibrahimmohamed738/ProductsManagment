@@ -232,20 +232,20 @@
         #endregion
 
         private System.Windows.Forms.GroupBox groupBox1;
-        private System.Windows.Forms.ComboBox cmbCategories;
         private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.TextBox txtDescription;
-        private System.Windows.Forms.TextBox txtRef;
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.Label label2;
-        private System.Windows.Forms.PictureBox pictureBoxProduct;
-        private System.Windows.Forms.TextBox txtProductPrice;
-        private System.Windows.Forms.TextBox txtProductQty;
         private System.Windows.Forms.Label label6;
         private System.Windows.Forms.Label label5;
         private System.Windows.Forms.Button btnBrowse;
-        private System.Windows.Forms.Button btnAddProduct;
         private System.Windows.Forms.Button btnCancel;
+        public System.Windows.Forms.ComboBox cmbCategories;
+        public System.Windows.Forms.TextBox txtDescription;
+        public System.Windows.Forms.TextBox txtRef;
+        public System.Windows.Forms.PictureBox pictureBoxProduct;
+        public System.Windows.Forms.TextBox txtProductPrice;
+        public System.Windows.Forms.TextBox txtProductQty;
+        public System.Windows.Forms.Button btnAddProduct;
     }
 }

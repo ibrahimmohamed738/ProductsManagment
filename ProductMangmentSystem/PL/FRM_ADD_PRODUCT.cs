@@ -14,6 +14,7 @@ namespace ProductMangmentSystem.PL
 {
     public partial class FRM_ADD_PRODUCT : Form
     {
+        public string state = "add";
         BL.CLS_PRODUCTS prd = new BL.CLS_PRODUCTS();
         public FRM_ADD_PRODUCT()
         {
@@ -40,27 +41,44 @@ namespace ProductMangmentSystem.PL
 
         private void btnAddProduct_Click(object sender, EventArgs e)
         {
-            MemoryStream ms = new MemoryStream();
-            pictureBoxProduct.Image.Save(ms,pictureBoxProduct.Image.RawFormat);
-            byte[] byteImage = ms.ToArray();
-            int CAT_ID = Convert.ToInt32(cmbCategories.SelectedValue);
-            int xQty = Convert.ToInt32(txtProductQty.Text);
-            prd.ADD_PRODUCT(CAT_ID,txtDescription.Text,txtRef.Text,xQty,txtProductPrice.Text,byteImage);
-            MessageBox.Show("Product Added Succefully", "Add Product",MessageBoxButtons.OK,MessageBoxIcon.Information);
+            if (state == "add")
+            {
+                MemoryStream ms = new MemoryStream();
+                pictureBoxProduct.Image.Save(ms, pictureBoxProduct.Image.RawFormat);
+                byte[] byteImage = ms.ToArray();
+                int CAT_ID = Convert.ToInt32(cmbCategories.SelectedValue);
+                int xQty = Convert.ToInt32(txtProductQty.Text);
+                prd.ADD_PRODUCT(CAT_ID, txtDescription.Text, txtRef.Text, xQty, txtProductPrice.Text, byteImage);
+                MessageBox.Show("Product Added Successfully", "Add Product", MessageBoxButtons.OK, MessageBoxIcon.Information);
+            }
+            else 
+            {
+                MemoryStream ms = new MemoryStream();
+                pictureBoxProduct.Image.Save(ms, pictureBoxProduct.Image.RawFormat);
+                byte[] byteImage = ms.ToArray();
+                int CAT_ID = Convert.ToInt32(cmbCategories.SelectedValue);
+                int xQty = Convert.ToInt32(txtProductQty.Text);
+                prd.UpdateProduct(CAT_ID, txtDescription.Text, txtRef.Text, xQty, txtProductPrice.Text, byteImage);
+                MessageBox.Show("Product Updated Successfully", "Edit Product", MessageBoxButtons.OK, MessageBoxIcon.Information);
+            }
         }
 
         private void txtRef_Validated(object sender, EventArgs e)
         {
-            DataTable dt = new DataTable();
-            dt = prd.VerifyProductID(txtRef.Text);
-
-            if (dt.Rows.Count > 0)
+            if (state == "add")
             {
-                MessageBox.Show("Product ID Already Exist", "Warning", MessageBoxButtons.OK, MessageBoxIcon.Warning);
-                txtRef.Focus();
-                txtRef.SelectionStart = 0;
-                txtRef.SelectionLength = txtRef.TextLength;
+                DataTable dt = new DataTable();
+                dt = prd.VerifyProductID(txtRef.Text);
+
+                if (dt.Rows.Count > 0)
+                {
+                    MessageBox.Show("Product ID Already Exist", "Warning", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                    txtRef.Focus();
+                    txtRef.SelectionStart = 0;
+                    txtRef.SelectionLength = txtRef.TextLength;
+                }
             }
+            
         }
     }
 }

@@ -35,10 +35,10 @@
             this.groupBox2 = new System.Windows.Forms.GroupBox();
             this.button6 = new System.Windows.Forms.Button();
             this.button5 = new System.Windows.Forms.Button();
-            this.button8 = new System.Windows.Forms.Button();
-            this.button4 = new System.Windows.Forms.Button();
+            this.btnExit = new System.Windows.Forms.Button();
+            this.btnShowPic = new System.Windows.Forms.Button();
             this.button7 = new System.Windows.Forms.Button();
-            this.button3 = new System.Windows.Forms.Button();
+            this.btnEditProduct = new System.Windows.Forms.Button();
             this.btnDeleteSelected = new System.Windows.Forms.Button();
             this.btnAddProduct = new System.Windows.Forms.Button();
             this.groupBox1.SuspendLayout();
@@ -87,10 +87,10 @@
             // 
             this.groupBox2.Controls.Add(this.button6);
             this.groupBox2.Controls.Add(this.button5);
-            this.groupBox2.Controls.Add(this.button8);
-            this.groupBox2.Controls.Add(this.button4);
+            this.groupBox2.Controls.Add(this.btnExit);
+            this.groupBox2.Controls.Add(this.btnShowPic);
             this.groupBox2.Controls.Add(this.button7);
-            this.groupBox2.Controls.Add(this.button3);
+            this.groupBox2.Controls.Add(this.btnEditProduct);
             this.groupBox2.Controls.Add(this.btnDeleteSelected);
             this.groupBox2.Controls.Add(this.btnAddProduct);
             this.groupBox2.Location = new System.Drawing.Point(13, 272);
@@ -118,23 +118,24 @@
             this.button5.Text = "Print Selected Product";
             this.button5.UseVisualStyleBackColor = true;
             // 
-            // button8
+            // btnExit
             // 
-            this.button8.Location = new System.Drawing.Point(339, 44);
-            this.button8.Name = "button8";
-            this.button8.Size = new System.Drawing.Size(63, 23);
-            this.button8.TabIndex = 0;
-            this.button8.Text = "Exit";
-            this.button8.UseVisualStyleBackColor = true;
+            this.btnExit.Location = new System.Drawing.Point(339, 44);
+            this.btnExit.Name = "btnExit";
+            this.btnExit.Size = new System.Drawing.Size(63, 23);
+            this.btnExit.TabIndex = 0;
+            this.btnExit.Text = "Exit";
+            this.btnExit.UseVisualStyleBackColor = true;
             // 
-            // button4
+            // btnShowPic
             // 
-            this.button4.Location = new System.Drawing.Point(339, 15);
-            this.button4.Name = "button4";
-            this.button4.Size = new System.Drawing.Size(124, 23);
-            this.button4.TabIndex = 0;
-            this.button4.Text = "Select Product Image";
-            this.button4.UseVisualStyleBackColor = true;
+            this.btnShowPic.Location = new System.Drawing.Point(339, 15);
+            this.btnShowPic.Name = "btnShowPic";
+            this.btnShowPic.Size = new System.Drawing.Size(124, 23);
+            this.btnShowPic.TabIndex = 0;
+            this.btnShowPic.Text = "Select Product Image";
+            this.btnShowPic.UseVisualStyleBackColor = true;
+            this.btnShowPic.Click += new System.EventHandler(this.btnShowPic_Click);
             // 
             // button7
             // 
@@ -145,14 +146,15 @@
             this.button7.Text = "Export to Excel";
             this.button7.UseVisualStyleBackColor = true;
             // 
-            // button3
+            // btnEditProduct
             // 
-            this.button3.Location = new System.Drawing.Point(239, 15);
-            this.button3.Name = "button3";
-            this.button3.Size = new System.Drawing.Size(96, 23);
-            this.button3.TabIndex = 0;
-            this.button3.Text = "Edit Product";
-            this.button3.UseVisualStyleBackColor = true;
+            this.btnEditProduct.Location = new System.Drawing.Point(239, 15);
+            this.btnEditProduct.Name = "btnEditProduct";
+            this.btnEditProduct.Size = new System.Drawing.Size(96, 23);
+            this.btnEditProduct.TabIndex = 0;
+            this.btnEditProduct.Text = "Edit Product";
+            this.btnEditProduct.UseVisualStyleBackColor = true;
+            this.btnEditProduct.Click += new System.EventHandler(this.btnEditProduct_Click);
             // 
             // btnDeleteSelected
             // 
@@ -205,10 +207,10 @@
         private System.Windows.Forms.GroupBox groupBox2;
         private System.Windows.Forms.Button button6;
         private System.Windows.Forms.Button button5;
-        private System.Windows.Forms.Button button8;
-        private System.Windows.Forms.Button button4;
+        private System.Windows.Forms.Button btnExit;
+        private System.Windows.Forms.Button btnShowPic;
         private System.Windows.Forms.Button button7;
-        private System.Windows.Forms.Button button3;
+        private System.Windows.Forms.Button btnEditProduct;
         private System.Windows.Forms.Button btnDeleteSelected;
         private System.Windows.Forms.Button btnAddProduct;
     }
