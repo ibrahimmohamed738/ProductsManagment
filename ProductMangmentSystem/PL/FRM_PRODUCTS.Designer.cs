@@ -203,7 +203,6 @@
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.TextBox txtSearch;
         private System.Windows.Forms.GroupBox groupBox1;
-        private System.Windows.Forms.DataGridView dataGridView1;
         private System.Windows.Forms.GroupBox groupBox2;
         private System.Windows.Forms.Button button6;
         private System.Windows.Forms.Button button5;
@@ -213,5 +212,6 @@
         private System.Windows.Forms.Button btnEditProduct;
         private System.Windows.Forms.Button btnDeleteSelected;
         private System.Windows.Forms.Button btnAddProduct;
+        public System.Windows.Forms.DataGridView dataGridView1;
     }
 }

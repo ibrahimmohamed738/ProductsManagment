@@ -13,12 +13,36 @@ namespace ProductMangmentSystem.PL
 {
     public partial class FRM_PRODUCTS : Form
     {
-        
+        private static FRM_PRODUCTS frm;
+
+        static void frm_FromClosed(object sender, FormClosedEventArgs e)
+        {
+            frm = null;
+
+        }
+
+        public static FRM_PRODUCTS getMainForm
+        {
+            get
+            {
+                if (frm == null)
+                {
+                    frm = new FRM_PRODUCTS();
+                    frm.FormClosed += new FormClosedEventHandler(frm_FromClosed);
+                }
+                return frm;
+            }
+
+        }
         BL.CLS_PRODUCTS prd = new BL.CLS_PRODUCTS();
 
         public FRM_PRODUCTS()
         {
             InitializeComponent();
+
+            if (frm == null)
+                frm = this;
+
             this.dataGridView1.DataSource = prd.GetAllProducts();
         }
 

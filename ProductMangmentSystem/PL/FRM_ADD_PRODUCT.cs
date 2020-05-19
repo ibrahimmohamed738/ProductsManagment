@@ -61,6 +61,8 @@ namespace ProductMangmentSystem.PL
                 prd.UpdateProduct(CAT_ID, txtDescription.Text, txtRef.Text, xQty, txtProductPrice.Text, byteImage);
                 MessageBox.Show("Product Updated Successfully", "Edit Product", MessageBoxButtons.OK, MessageBoxIcon.Information);
             }
+
+            FRM_PRODUCTS.getMainForm.dataGridView1.DataSource = prd.GetAllProducts();
         }
 
         private void txtRef_Validated(object sender, EventArgs e)
