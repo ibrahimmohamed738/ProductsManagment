@@ -94,6 +94,18 @@
     <Compile Include="RPT\FRM_RPT_PRODUCT.Designer.cs">
       <DependentUpon>FRM_RPT_PRODUCT.cs</DependentUpon>
     </Compile>
+    <Compile Include="RPT\rpt_All_products.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>rpt_All_products.rpt</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="RPT\RPT_single_product.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>RPT_single_product.rpt</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
     <EmbeddedResource Include="PL\FRM_ADD_PRODUCT.resx">
       <DependentUpon>FRM_ADD_PRODUCT.cs</DependentUpon>
     </EmbeddedResource>
@@ -117,6 +129,14 @@
     <EmbeddedResource Include="RPT\FRM_RPT_PRODUCT.resx">
       <DependentUpon>FRM_RPT_PRODUCT.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="RPT\rpt_All_products.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>rpt_All_products.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="RPT\RPT_single_product.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>RPT_single_product.cs</LastGenOutput>
+    </EmbeddedResource>
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
       <LastGenOutput>Settings.Designer.cs</LastGenOutput>
@@ -135,7 +155,9 @@
   <ItemGroup>
     <None Include="App.config" />
   </ItemGroup>
-  <ItemGroup />
+  <ItemGroup>
+    <Service Include="{C0C07587-41A7-46C8-8FBD-3F9C8EBE2DDC}" />
+  </ItemGroup>
   <ItemGroup>
     <Content Include="Images\Button-Close-icon %282%29.png" />
     <Content Include="Images\icon-accept-icon.png" />

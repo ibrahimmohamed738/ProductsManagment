@@ -28,26 +28,27 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.crystalReportViewer1 = new CrystalDecisions.Windows.Forms.CrystalReportViewer();
+            this.crystalReportViewerSingle = new CrystalDecisions.Windows.Forms.CrystalReportViewer();
             this.SuspendLayout();
             // 
-            // crystalReportViewer1
+            // crystalReportViewerSingle
             // 
-            this.crystalReportViewer1.ActiveViewIndex = -1;
-            this.crystalReportViewer1.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.crystalReportViewer1.Cursor = System.Windows.Forms.Cursors.Default;
-            this.crystalReportViewer1.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.crystalReportViewer1.Location = new System.Drawing.Point(0, 0);
-            this.crystalReportViewer1.Name = "crystalReportViewer1";
-            this.crystalReportViewer1.Size = new System.Drawing.Size(513, 376);
-            this.crystalReportViewer1.TabIndex = 0;
+            this.crystalReportViewerSingle.ActiveViewIndex = -1;
+            this.crystalReportViewerSingle.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.crystalReportViewerSingle.Cursor = System.Windows.Forms.Cursors.Default;
+            this.crystalReportViewerSingle.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.crystalReportViewerSingle.Location = new System.Drawing.Point(0, 0);
+            this.crystalReportViewerSingle.Name = "crystalReportViewerSingle";
+            this.crystalReportViewerSingle.Size = new System.Drawing.Size(513, 376);
+            this.crystalReportViewerSingle.TabIndex = 0;
+            this.crystalReportViewerSingle.ToolPanelView = CrystalDecisions.Windows.Forms.ToolPanelViewType.None;
             // 
             // FRM_RPT_PRODUCT
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(513, 376);
-            this.Controls.Add(this.crystalReportViewer1);
+            this.Controls.Add(this.crystalReportViewerSingle);
             this.MaximizeBox = false;
             this.MinimizeBox = false;
             this.Name = "FRM_RPT_PRODUCT";
@@ -60,6 +61,6 @@
 
         #endregion
 
-        private CrystalDecisions.Windows.Forms.CrystalReportViewer crystalReportViewer1;
+        public CrystalDecisions.Windows.Forms.CrystalReportViewer crystalReportViewerSingle;
     }
 }

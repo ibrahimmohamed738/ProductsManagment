@@ -33,11 +33,11 @@
             this.groupBox1 = new System.Windows.Forms.GroupBox();
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
             this.groupBox2 = new System.Windows.Forms.GroupBox();
-            this.button6 = new System.Windows.Forms.Button();
-            this.button5 = new System.Windows.Forms.Button();
+            this.btnPrintAllProducts = new System.Windows.Forms.Button();
+            this.btnPrintSingle = new System.Windows.Forms.Button();
             this.btnExit = new System.Windows.Forms.Button();
             this.btnShowPic = new System.Windows.Forms.Button();
-            this.button7 = new System.Windows.Forms.Button();
+            this.btnExportExcel = new System.Windows.Forms.Button();
             this.btnEditProduct = new System.Windows.Forms.Button();
             this.btnDeleteSelected = new System.Windows.Forms.Button();
             this.btnAddProduct = new System.Windows.Forms.Button();
@@ -85,11 +85,11 @@
             // 
             // groupBox2
             // 
-            this.groupBox2.Controls.Add(this.button6);
-            this.groupBox2.Controls.Add(this.button5);
+            this.groupBox2.Controls.Add(this.btnPrintAllProducts);
+            this.groupBox2.Controls.Add(this.btnPrintSingle);
             this.groupBox2.Controls.Add(this.btnExit);
             this.groupBox2.Controls.Add(this.btnShowPic);
-            this.groupBox2.Controls.Add(this.button7);
+            this.groupBox2.Controls.Add(this.btnExportExcel);
             this.groupBox2.Controls.Add(this.btnEditProduct);
             this.groupBox2.Controls.Add(this.btnDeleteSelected);
             this.groupBox2.Controls.Add(this.btnAddProduct);
@@ -100,23 +100,25 @@
             this.groupBox2.TabStop = false;
             this.groupBox2.Text = "Options";
             // 
-            // button6
+            // btnPrintAllProducts
             // 
-            this.button6.Location = new System.Drawing.Point(598, 15);
-            this.button6.Name = "button6";
-            this.button6.Size = new System.Drawing.Size(103, 23);
-            this.button6.TabIndex = 0;
-            this.button6.Text = "Print All Product";
-            this.button6.UseVisualStyleBackColor = true;
+            this.btnPrintAllProducts.Location = new System.Drawing.Point(598, 15);
+            this.btnPrintAllProducts.Name = "btnPrintAllProducts";
+            this.btnPrintAllProducts.Size = new System.Drawing.Size(103, 23);
+            this.btnPrintAllProducts.TabIndex = 0;
+            this.btnPrintAllProducts.Text = "Print All Product";
+            this.btnPrintAllProducts.UseVisualStyleBackColor = true;
+            this.btnPrintAllProducts.Click += new System.EventHandler(this.btnPrintAllProducts_Click);
             // 
-            // button5
+            // btnPrintSingle
             // 
-            this.button5.Location = new System.Drawing.Point(466, 15);
-            this.button5.Name = "button5";
-            this.button5.Size = new System.Drawing.Size(128, 23);
-            this.button5.TabIndex = 0;
-            this.button5.Text = "Print Selected Product";
-            this.button5.UseVisualStyleBackColor = true;
+            this.btnPrintSingle.Location = new System.Drawing.Point(466, 15);
+            this.btnPrintSingle.Name = "btnPrintSingle";
+            this.btnPrintSingle.Size = new System.Drawing.Size(128, 23);
+            this.btnPrintSingle.TabIndex = 0;
+            this.btnPrintSingle.Text = "Print Selected Product";
+            this.btnPrintSingle.UseVisualStyleBackColor = true;
+            this.btnPrintSingle.Click += new System.EventHandler(this.btnPrintSingle_Click);
             // 
             // btnExit
             // 
@@ -126,6 +128,7 @@
             this.btnExit.TabIndex = 0;
             this.btnExit.Text = "Exit";
             this.btnExit.UseVisualStyleBackColor = true;
+            this.btnExit.Click += new System.EventHandler(this.btnExit_Click);
             // 
             // btnShowPic
             // 
@@ -137,14 +140,15 @@
             this.btnShowPic.UseVisualStyleBackColor = true;
             this.btnShowPic.Click += new System.EventHandler(this.btnShowPic_Click);
             // 
-            // button7
+            // btnExportExcel
             // 
-            this.button7.Location = new System.Drawing.Point(239, 44);
-            this.button7.Name = "button7";
-            this.button7.Size = new System.Drawing.Size(96, 23);
-            this.button7.TabIndex = 0;
-            this.button7.Text = "Export to Excel";
-            this.button7.UseVisualStyleBackColor = true;
+            this.btnExportExcel.Location = new System.Drawing.Point(239, 44);
+            this.btnExportExcel.Name = "btnExportExcel";
+            this.btnExportExcel.Size = new System.Drawing.Size(96, 23);
+            this.btnExportExcel.TabIndex = 0;
+            this.btnExportExcel.Text = "Export to Excel";
+            this.btnExportExcel.UseVisualStyleBackColor = true;
+            this.btnExportExcel.Click += new System.EventHandler(this.btnExportExcel_Click);
             // 
             // btnEditProduct
             // 
@@ -204,11 +208,11 @@
         private System.Windows.Forms.TextBox txtSearch;
         private System.Windows.Forms.GroupBox groupBox1;
         private System.Windows.Forms.GroupBox groupBox2;
-        private System.Windows.Forms.Button button6;
-        private System.Windows.Forms.Button button5;
+        private System.Windows.Forms.Button btnPrintAllProducts;
+        private System.Windows.Forms.Button btnPrintSingle;
         private System.Windows.Forms.Button btnExit;
         private System.Windows.Forms.Button btnShowPic;
-        private System.Windows.Forms.Button button7;
+        private System.Windows.Forms.Button btnExportExcel;
         private System.Windows.Forms.Button btnEditProduct;
         private System.Windows.Forms.Button btnDeleteSelected;
         private System.Windows.Forms.Button btnAddProduct;

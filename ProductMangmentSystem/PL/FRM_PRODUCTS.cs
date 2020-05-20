@@ -8,6 +8,9 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using System.IO;
+using CrystalDecisions.CrystalReports.Engine;
+using CrystalDecisions.CrystalReports;
+using CrystalDecisions.Shared;
 
 namespace ProductMangmentSystem.PL
 {
@@ -100,6 +103,45 @@ namespace ProductMangmentSystem.PL
             frm.pictureBoxProduct.Image = Image.FromStream(ms);
             frm.ShowDialog();
 
+        }
+
+        private void btnPrintSingle_Click(object sender, EventArgs e)
+        {
+            RPT.RPT_single_product myReport = new RPT.RPT_single_product();
+            myReport.SetParameterValue("@ID",this.dataGridView1.CurrentRow.Cells[0].Value.ToString());
+            RPT.FRM_RPT_PRODUCT myFrom = new RPT.FRM_RPT_PRODUCT();
+            myFrom.crystalReportViewerSingle.ReportSource = myReport;
+            myFrom.ShowDialog();
+        }
+
+        private void btnPrintAllProducts_Click(object sender, EventArgs e)
+        {
+            RPT.rpt_All_products myRepot = new RPT.rpt_All_products();
+            RPT.FRM_RPT_PRODUCT myForm = new RPT.FRM_RPT_PRODUCT();
+            myForm.crystalReportViewerSingle.ReportSource = myRepot;
+            myForm.ShowDialog();
+        }
+
+        private void btnExportExcel_Click(object sender, EventArgs e)
+        {
+            RPT.rpt_All_products myReport = new RPT.rpt_All_products();
+            ExportOptions export = new ExportOptions();
+            DiskFileDestinationOptions defile = new DiskFileDestinationOptions();
+            ExcelFormatOptions excelformat = new ExcelFormatOptions();
+            defile.DiskFileName = @"D:\MYReport.xls";
+            export = myReport.ExportOptions;
+            export.ExportDestinationType = ExportDestinationType.DiskFile;
+            export.ExportFormatType = ExportFormatType.Excel;
+            export.ExportFormatOptions = excelformat;
+            export.ExportDestinationOptions = defile;
+
+            myReport.Export();
+            MessageBox.Show("Report Exported Successfully", "Export", MessageBoxButtons.OK, MessageBoxIcon.Information);
+        }
+
+        private void btnExit_Click(object sender, EventArgs e)
+        {
+            Close();
         }
     }
 }
